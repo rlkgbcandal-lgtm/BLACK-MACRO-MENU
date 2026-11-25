@@ -1,0 +1,23 @@
+BLACK MACRO MENU - projeto para Windows
+
+GERAR O .EXE:
+1. Instale Python 3 no Windows: https://www.python.org/downloads/
+2. Durante a instalacao, marque "Add Python to PATH".
+3. Extraia esta pasta do ZIP.
+4. Clique duas vezes em GERAR_EXE.bat.
+5. Aguarde a instalacao das dependencias e a compilacao.
+6. O executavel sera criado em dist\BLACK_MACRO_MENU.exe.
+
+USAR:
+- Abra BLACK_MACRO_MENU.exe.
+- Cadastre uma tecla de ativacao (ex.: F6).
+- Digite a sequencia separada por virgulas (ex.: w, w, space, e).
+- Defina o intervalo em milissegundos.
+- Clique em ADICIONAR / ATUALIZAR e ATIVAR MACROS.
+- O arquivo macros.json sera salvo ao lado do EXE.
+
+IMPORTANTE:
+- O ZIP inclui o codigo e o gerador do EXE; o executavel Windows e compilado no proprio Windows.
+- Teste primeiro no Bloco de Notas.
+- Se as teclas nao forem detectadas no jogo, tente executar o programa como administrador.
+- Use macros somente onde forem permitidas pelas regras do servidor.

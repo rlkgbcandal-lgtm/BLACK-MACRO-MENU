@@ -1,0 +1,25 @@
+GERAR O EXE SEM INSTALAR PYTHON NO SEU COMPUTADOR
+
+Este projeto inclui um fluxo de compilacao na nuvem usando GitHub Actions.
+O GitHub compila o programa em um Windows e entrega o arquivo EXE pronto.
+
+PASSOS:
+1. Crie uma conta gratuita em https://github.com/ (se ainda nao tiver).
+2. Crie um repositorio novo e envie TODOS os arquivos desta pasta para ele,
+   mantendo a pasta .github/workflows/build-windows.yml.
+3. No repositorio, abra a aba Actions.
+4. Se aparecer, clique em "I understand my workflows, go ahead and enable them".
+5. Na lista lateral, escolha "Build Windows EXE".
+6. Clique em "Run workflow" e confirme em "Run workflow".
+7. Aguarde o trabalho ficar verde (concluido).
+8. Abra a execucao concluida e baixe o artefato
+   "BLACK_MACRO_MENU-Windows" na secao Artifacts.
+9. Extraia o ZIP baixado. Dentro estará BLACK_MACRO_MENU.exe.
+
+O EXE gerado inclui o runtime do Python e as dependencias; nao exige instalar
+Python no computador onde for executado.
+
+OBSERVACAO:
+Nao foi possivel anexar aqui um EXE Windows ja compilado: este ambiente de
+criacao nao possui um compilador/runner Windows. O workflow acima faz a
+compilacao em um runner Windows hospedado pelo GitHub.
