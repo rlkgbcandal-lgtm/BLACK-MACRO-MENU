@@ -1,0 +1,35 @@
+
+name: Build Windows EXE
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Baixar projeto
+        uses: actions/checkout@v4
+
+      - name: Configurar Python no compilador
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install pyinstaller
+
+      - name: Compilar EXE
+        run: |
+          pyinstaller --noconfirm --clean --onefile --windowed --name BLACK_MACRO_MENU main.py
+
+      - name: Disponibilizar executável
+        uses: actions/upload-artifact@v4
+        with:
+          name: BLACK_MACRO_MENU-Windows
+          path: dist/BLACK_MACRO_MENU.exe
